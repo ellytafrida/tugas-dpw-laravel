@@ -2,6 +2,6 @@
 
 namespace App\Models;
 
-class category extends Model {
+class Kategori extends Model {
     protected $table = 'category';
 }

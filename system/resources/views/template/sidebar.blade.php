@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="{{ url('public/admin') }}/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">TOMATO</span>
+      <span class="brand-text font-weight-light">LYY ELECTRONIC</span>
     </a>
 
     <!-- Sidebar -->
@@ -14,6 +14,16 @@
         </div>
         <div class="info">
           <a href="#" class="d-block">ELLY TAFRIDA</a>
+            @if(Auth::check())
+                {{request()->user()->nama}}
+            @elseif(Auth::guard('pembeli')->check())
+               {{Auth::guard('pembeli')->user()->nama}}
+            @elseif(Auth::guard('penjual')->check())
+               {{Auth::guard('penjual')->user()->nama}}
+            @else
+                Silahkan Login
+            @endif
+          </a>
         </div>
       </div>
 

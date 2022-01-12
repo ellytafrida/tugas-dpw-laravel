@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\UserController;
 
 
@@ -28,11 +29,19 @@ Route::get('/', function () {
 Route::get('/home', [HomeController::class, 'showHome']);
 Route::get('/about', [HomeController::class, 'showAbout']);
 Route::get('/dashboard', [HomeController::class, 'showdashboard']);
+Route::get('/dashboard/{status}', [HomeController::class, 'showdashboard']);
 Route::get('/category', [HomeController::class, 'showCategory']);
 Route::get('/store', [HomeController::class, 'showStore']);
 Route::get('/blank', [HomeController::class, 'showBlank']);
 Route::get('/user', [HomeController::class, 'showUser']);
 Route::get('/product', [HomeController::class, 'showProduct']);
+Route::get('test-ajax', [HomeController::class, 'testAjax']);
+
+
+Route::get('setting', [SettingController::class, 'index']);
+Route::post('setting', [SettingController::class, 'store']);
+
+
 
 Route::get('product/{product}/{hargaMin?}/{hargaMax?})', [HomeController::class, 'product']);
 

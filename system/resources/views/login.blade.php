@@ -45,6 +45,7 @@
                   <label for="password">Password</label>
                   <input type="password" class="form-control" placeholder="Password" name="password">
                 </div>
+            
                 
                 <div class="d-sm-flex mb-5 align-items-center">
                   <label class="control control--checkbox mb-3 mb-sm-0"><span class="caption">Remember me</span>

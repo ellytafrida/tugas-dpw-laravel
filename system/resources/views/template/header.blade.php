@@ -38,9 +38,9 @@
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <a href="#" class="dropdown-item">
-          <i class="fa fa-user"></i> Prifile
+          <i class="fa fa-user"></i> Profile
           </a>
-          <a href="#" class="dropdown-item">
+          <a href="{{url('setting')}}" class="dropdown-item">
           <i class="fa fa-cog"></i> Setting
           </a>
           <a href="{{url('/login')}}" class="dropdown-item">

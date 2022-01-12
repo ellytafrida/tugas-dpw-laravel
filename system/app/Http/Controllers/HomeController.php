@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Provinsi;
+use App\Models\Product;
+
 class HomeController extends Controller{
 
 
@@ -41,5 +44,8 @@ class HomeController extends Controller{
         return view('backview.category');
     }
 
-    
+    function testAjax(){
+        $data['list_provinsi'] = Provinsi::all();
+        return view('test-ajax', $data);
+    }
 }

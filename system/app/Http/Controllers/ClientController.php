@@ -1,7 +1,7 @@
 <?php 
 
 namespace App\Http\Controllers;
-use App\Models\Produk;
+use App\Models\Product;
 use App\Models\Kategori;
 
 class ClientController extends Controller{
@@ -9,12 +9,12 @@ class ClientController extends Controller{
 
 function showHome(){
 	$data['list_kategori'] = Kategori::all();
-	$data['list_produk'] = Produk::Paginate('4');
-	return view ('home', $data);
+	$data['list_produk'] = Product::Paginate('4');
+	return view ('frontview.home', $data);
 	}
-function showProduk(Produk $produk){
+function showProduk(Product $produk){
 		$data['produk'] = $produk;
-		return view('produk', $data);
+		return view('frontview.produk', $data);
 	}
 function filter(){
 		$nama = request('nama');

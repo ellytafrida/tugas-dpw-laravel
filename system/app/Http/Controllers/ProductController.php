@@ -5,7 +5,7 @@ use App\Models\Product;
 
 class ProductController extends Controller {
     function index(){
-        $id_user = request()->user()->id;
+        $id_user = request()->user();
         $data['list_product'] = product::where('id_user', $id_user)->get();
         return view('Product.index', $data);
     }
